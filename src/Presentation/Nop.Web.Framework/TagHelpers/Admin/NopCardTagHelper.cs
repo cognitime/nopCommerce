@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using Nop.Web.Framework.Components;
 using Nop.Web.Framework.Extensions;
 using Nop.Web.Framework.Factories;
 using Nop.Web.Framework.Infrastructure;
@@ -30,17 +29,15 @@ namespace Nop.Web.Framework.TagHelpers.Admin
 
         #region Fields
 
-        protected readonly IHtmlHelper _htmlHelper;
-        private readonly IViewComponentHelper _viewComponentHelper;
+        protected readonly IViewComponentHelper _viewComponentHelper;
         protected readonly IWidgetModelFactory _widgetModelFactory;
 
         #endregion
 
         #region Ctor
 
-        public NopCardTagHelper(IHtmlHelper htmlHelper, IViewComponentHelper viewComponentHelper, IWidgetModelFactory widgetModelFactory)
+        public NopCardTagHelper(IViewComponentHelper viewComponentHelper, IWidgetModelFactory widgetModelFactory)
         {
-            _htmlHelper = htmlHelper;
             _viewComponentHelper = viewComponentHelper;
             _widgetModelFactory = widgetModelFactory;
         }
